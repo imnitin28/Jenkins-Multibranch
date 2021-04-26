@@ -3,13 +3,13 @@ pipeline{
 
     stages{
         stage('Print current Branch') {
-            steps {
-                npm pack
-                npm start
-            }
-            stage('Checkout') {
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/imnitin28/node-hello.git']]])
-            }
+          
+            stage('Main') {
+                    echo "Main branch"
+                }
+            stage('temp-branch') {
+                    echo "Main branch"
+                }
             post {
                 success {
                     echo "App started succesfully"
