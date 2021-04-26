@@ -5,10 +5,14 @@ pipeline{
         stage('Print current Branch') {
           
             stage('Main') {
-                    echo "Main branch"
+                steps {
+                        echo "Main branch"
+                    }
                 }
             stage('temp-branch') {
-                    echo "Main branch"
+                steps {
+                        echo "temp-branch"
+                    }
                 }
             post {
                 success {
